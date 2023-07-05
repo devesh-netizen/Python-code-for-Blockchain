@@ -1,9 +1,7 @@
-# Module 1 - Create a blockchain
 import datetime
 import hashlib
 import json
 from flask import Flask, jsonify
-
 
 # part -1 Building a BlockChain
 class Blockchain:
@@ -20,7 +18,6 @@ class Blockchain:
                  'previous_hash': previous_hash}
         self.chain.append(block)
         return(block)
-    
     
     def get_previous_block(self):
         return(self.chain[-1])
@@ -55,9 +52,6 @@ class Blockchain:
             previous_block = block
             block_index +=1
         return True
-        
-        
-            
         
         
 # part 2 - Mining our Blockchain
